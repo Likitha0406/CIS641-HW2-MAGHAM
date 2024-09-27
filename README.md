@@ -7,5 +7,6 @@
 # Technical Background: 
  I hold a bachelor's degree in Computer Science and Engineering (CSE), where I gained a solid foundation in programming, algorithms, and software development. Currently, I am pursuing my Master’s in Computer Science, focusing on advanced topics like data structures, machine learning, and system architecture to deepen my knowledge and expertise in the field. 
 
-#[Favorite Meme]: (https://images.app.goo.gl/vp5oJUr2Xqk1ZWwa8)
+# Favorite Meme:
+  [Meme] (https://images.app.goo.gl/vp5oJUr2Xqk1ZWwa8)
 
