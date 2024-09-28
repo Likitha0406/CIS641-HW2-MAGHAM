@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Likitha Magham's Portfolio</title>
-
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
     
@@ -34,42 +34,47 @@
         h1 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            color: #ff5733; /* Vibrant orange for the name */
+            color: #333;
             font-size: 36px;
             margin-bottom: 20px;
         }
         p {
             font-size: 18px;
             line-height: 1.6;
-        }
-        p span {
-            font-weight: bold;
-        }
-        .details {
-            color: #33ccff; /* Light blue for details */
-        }
-        .interests {
-            color: #66ff66; /* Green for interests */
-        }
-        .technical {
-            color: #ffcc00; /* Yellow for technical background */
+            color: #555;
         }
         img {
             margin-top: 20px;
             max-width: 100%;
             border-radius: 10px;
         }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #66a6ff;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #89f7fe;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Likitha Magham</h1>
-        <p class="details"><span>Name:</span> Likitha Magham</p>
-        <p class="interests"><span>Interests:</span> Traveling, Singing, Cooking</p>
-        <p class="technical"><span>Technical Background:</span> Bachelor's in CSE, currently pursuing a Master's in Computer Science</p>
+        <h1>Welcome to My Portfolio</h1>
+        <p><strong>Name:</strong> Likitha Magham</p>
+        <p><strong>Interests:</strong> Traveling, Singing, Cooking</p>
+        <p><strong>Technical Background:</strong> Bachelor's in CSE, currently pursuing a Master's in Computer Science</p>
         
         <h2>My Favorite Meme:</h2>
         <img src="meme.png" alt="My Favorite Meme">
+
+        <a class="button" href="https://github.com/Likitha0406">Visit My GitHub</a>
     </div>
 </body>
 </html>
