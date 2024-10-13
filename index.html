@@ -7,9 +7,9 @@
     <title>Likitha Magham's Portfolio</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- External CSS for styling -->
+    <!-- Internal CSS for styling -->
     <style>
         * {
             margin: 0;
@@ -17,94 +17,120 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(120deg, #fccb90, #d57eeb);
-            color: #fff;
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(160deg, #e0c3fc, #8ec5fc);
+            color: #333;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            text-align: center;
+            min-height: 100vh;
+            flex-direction: column;
         }
         .container {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: white;
             padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            max-width: 1000px;
-            width: 90%;
-            transition: transform 0.5s;
-        }
-        .container:hover {
-            transform: scale(1.03);
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+            position: relative;
         }
         h1 {
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
-            color: #fccb90;
-            font-size: 40px;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
+            color: #6a11cb;
+            font-size: 42px;
+            margin-bottom: 10px;
         }
         h2 {
             font-family: 'Poppins', sans-serif;
-            font-size: 24px;
+            font-size: 28px;
+            color: #333;
             margin-bottom: 20px;
-            color: #d57eeb;
+            font-weight: 600;
         }
         p {
             font-size: 18px;
             line-height: 1.7;
-            color: #f0f0f0;
+            color: #555;
         }
         img.profile-pic {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 20px;
-            border: 4px solid #fccb90;
+            border: 5px solid #6a11cb;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         .button {
             display: inline-block;
             margin-top: 30px;
-            padding: 12px 25px;
+            padding: 15px 30px;
             font-size: 18px;
-            background-color: #d57eeb;
+            background-color: #6a11cb;
             color: white;
             border-radius: 30px;
             text-decoration: none;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
         .button:hover {
-            background-color: #fccb90;
-            transform: translateY(-5px);
+            background-color: #b721ff;
+            transform: translateY(-3px);
+        }
+        .section {
+            margin: 30px 0;
         }
         .skills-list, .projects-list {
-            text-align: left;
-            color: #f0f0f0;
             margin: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
         }
         .skills-list li, .projects-list li {
             margin-bottom: 10px;
             font-size: 18px;
+            width: 45%;
         }
         .term-project {
             margin-top: 40px;
         }
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .project-description {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            transition: transform 0.4s ease;
         }
-        .container {
-            animation: fadeInUp 1s ease-in-out;
+        .project-description:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #777;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            img.profile-pic {
+                width: 140px;
+                height: 140px;
+            }
+            .skills-list li, .projects-list li {
+                width: 100%;
+            }
+            .container {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -113,24 +139,44 @@
         <!-- Profile Picture -->
         <img src="profile-pic.png" alt="Profile Picture" class="profile-pic">
 
+        <!-- Name -->
         <h1>Likitha Magham</h1>
 
-        <h2>Interests</h2>
-        <p>I am passionate about traveling, singing, and cooking. I enjoy exploring new cultures and places, and expressing my creativity through music and culinary experiments.</p>
-
-        <h2>Technical Background</h2>
-        <p>I hold a Bachelor's degree in Computer Science and Engineering, and I am currently pursuing my Master's in Computer Science, focusing on data structures, machine learning, and system architecture.</p>
-
-        <h2>Team GitHub Page</h2>
-        <a class="button" href="https://github.com/Likitha0406/GVSU-CIS641-The-PowerPuffGirls" target="_blank">Visit My Team's GitHub Page</a>
-
-        <div class="term-project">
-            <h2>My Term Project</h2>
-            <p>For my term project, I am developing a web-based system that leverages cloud infrastructure and data processing technologies to build a scalable solution for real-time data analysis. This project involves the integration of front-end technologies with back-end cloud services, aiming to optimize the user experience while maintaining system efficiency.</p>
-            <p>My role in this project includes designing the system architecture, implementing data pipelines, and ensuring smooth communication between different system components. This project demonstrates my ability to apply both front-end and back-end skills, including Java, Spring Boot, and AWS, in a practical setting.</p>
+        <!-- Interests Section -->
+        <div class="section">
+            <h2>Interests</h2>
+            <p>I am passionate about traveling, singing, and cooking. I enjoy exploring new cultures, expressing creativity through music, and experimenting with different cuisines.</p>
         </div>
 
-        <a class="button" href="https://github.com/Likitha0406">Visit My GitHub Profile</a>
+        <!-- Technical Background Section -->
+        <div class="section">
+            <h2>Technical Background</h2>
+            <p>I hold a Bachelor's degree in Computer Science and Engineering, and I am currently pursuing my Master's in Computer Science. My focus is on data structures, machine learning, and system architecture.</p>
+        </div>
+
+        <!-- GitHub Link -->
+        <div class="section">
+            <h2>Team GitHub Page</h2>
+            <a class="button" href="https://github.com/yourteam/your-repository" target="_blank">Visit My Team's GitHub Page</a>
+        </div>
+
+        <!-- Term Project Section -->
+        <div class="term-project">
+            <h2>My Term Project</h2>
+            <div class="project-description">
+                <p>For my term project, I am developing a web-based system that leverages cloud infrastructure and data processing technologies to build a scalable solution for real-time data analysis. This project involves the integration of front-end technologies with back-end cloud services, aiming to optimize user experience while maintaining system efficiency.</p>
+                <p>My role includes designing the system architecture, implementing data pipelines, and ensuring smooth communication between different system components. This project showcases my ability to apply both front-end and back-end skills, including Java, Spring Boot, and AWS, in a practical setting.</p>
+            </div>
+        </div>
+
+        <!-- Personal GitHub Link -->
+        <div class="section">
+            <a class="button" href="https://github.com/Likitha0406" target="_blank">Visit My GitHub Profile</a>
+        </div>
+
+        <footer>
+            © 2024 Likitha Magham | Designed with passion.
+        </footer>
     </div>
 </body>
 </html>
