@@ -31,12 +31,27 @@
             scroll-behavior: smooth;
             flex-direction: column;
             padding: 20px; /* Added padding for aesthetics */
-            animation: fadeIn 1s; /* Animation on body load */
+            animation: backgroundChange 10s ease infinite; /* Background color change animation */
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        
+        @keyframes backgroundChange {
+            0% {
+                background: linear-gradient(135deg, #800080, #ffffff);
+            }
+            25% {
+                background: linear-gradient(135deg, #d57eeb, #ffffff);
+            }
+            50% {
+                background: linear-gradient(135deg, #f39c12, #ffffff);
+            }
+            75% {
+                background: linear-gradient(135deg, #e74c3c, #ffffff);
+            }
+            100% {
+                background: linear-gradient(135deg, #800080, #ffffff);
+            }
         }
+
         .container {
             background-color: rgba(255, 255, 255, 0.9);
             padding: 40px;
@@ -47,20 +62,24 @@
             margin-bottom: 40px;
             transition: transform 0.5s, box-shadow 0.5s; /* Smooth transition for hover */
         }
+        
         .container:hover {
             transform: translateY(-10px); /* Lift effect on hover */
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
         }
+        
         h1 {
             font-size: 48px;
             color: #800080;
             margin-bottom: 10px;
             animation: slideIn 0.5s; /* Animation for heading */
         }
+        
         @keyframes slideIn {
             from { transform: translateY(-20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
+        
         h2 {
             font-size: 28px;
             margin-bottom: 15px;
@@ -68,15 +87,18 @@
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
             transition: color 0.3s; /* Transition for hover effect */
         }
+        
         h2:hover {
             color: #d57eeb; /* Change color on hover */
         }
+        
         p {
             font-size: 18px;
             line-height: 1.7;
             color: #555;
             margin-bottom: 20px;
         }
+        
         img.profile-pic {
             width: 150px;
             height: 150px;
@@ -87,9 +109,11 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s;
         }
+        
         img.profile-pic:hover {
             transform: scale(1.1);
         }
+        
         .button {
             display: inline-block;
             margin-top: 20px;
@@ -101,15 +125,18 @@
             text-decoration: none;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
+        
         .button:hover {
             background-color: #d57eeb;
             transform: translateY(-3px);
             animation: bounce 0.3s; /* Bounce animation */
         }
+        
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-5px); }
         }
+        
         .term-project {
             margin-top: 40px;
             padding: 20px;
@@ -118,24 +145,29 @@
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s;
         }
+        
         .term-project:hover {
             transform: translateY(-5px);
         }
+        
         footer {
             margin-top: 30px;
             font-size: 14px;
             color: #777;
             text-align: center; /* Center the footer text */
         }
+        
         .social-links {
             margin-top: 20px;
         }
+        
         .social-links a {
             margin: 0 10px;
             font-size: 24px;
             color: #800080;
             transition: color 0.3s;
         }
+        
         .social-links a:hover {
             color: #d57eeb;
         }
