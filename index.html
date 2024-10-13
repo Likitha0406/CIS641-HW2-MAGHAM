@@ -19,104 +19,58 @@
             padding: 0;
             box-sizing: border-box;
         }
-
-        html, body {
-            height: 100%; /* Ensure full height */
-        }
-
         body {
             font-family: 'Times New Roman', serif;
             background: linear-gradient(135deg, #800080, #ffffff);
             color: #333;
             display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            padding: 20px;
-            animation: fadeIn 1s;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            flex-direction: column;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
         .container {
             background-color: rgba(255, 255, 255, 0.9);
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            max-width: 900px; /* Set max width */
-            width: 90%; /* Responsive width */
-            transition: transform 0.5s, box-shadow 0.5s;
-            text-align: center; /* Center-align text in the container */
+            max-width: 900px;
+            width: 90%;
+            margin-bottom: 40px;
+            transition: transform 0.5s;
         }
-
-        .container:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-        }
-
         h1 {
             font-size: 48px;
             color: #800080;
             margin-bottom: 10px;
-            animation: slideIn 0.5s; /* Animation for heading */
         }
-
-        @keyframes slideIn {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
         h2 {
             font-size: 28px;
             margin-bottom: 15px;
             color: #800080;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-            transition: color 0.3s;
         }
-
-        h2:hover {
-            color: #d57eeb;
-        }
-
         p {
             font-size: 18px;
             line-height: 1.7;
             color: #555;
             margin-bottom: 20px;
         }
-
-        .profile-container {
-            position: relative;
-            display: inline-block;
-            margin: 20px auto;
-            animation: float 3s ease-in-out infinite; /* Floating effect */
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px); /* Move up */
-            }
-        }
-
         img.profile-pic {
-            width: 150px; /* Ensure size is appropriate */
-            height: 150px; /* Ensure size is appropriate */
-            border-radius: 50%; /* Circular profile picture */
-            object-fit: cover; /* Maintain aspect ratio */
-            border: 5px solid #800080; /* Border color */
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto;
+            border: 5px solid #800080;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s; /* Smooth scale effect */
+            transition: transform 0.3s;
         }
-
         img.profile-pic:hover {
-            transform: scale(1.1); /* Zoom effect on hover */
+            transform: scale(1.1);
         }
-
         .button {
             display: inline-block;
             margin-top: 20px;
@@ -127,32 +81,11 @@
             border-radius: 30px;
             text-decoration: none;
             transition: background-color 0.3s ease, transform 0.3s ease;
-            position: relative; /* To position pseudo-elements */
-            overflow: hidden; /* To hide overflowing content */
         }
-
-        .button:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 0;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.5);
-            transition: width 0.5s ease, left 0.5s ease;
-            z-index: 0; /* Behind text */
-        }
-
-        .button:hover:after {
-            width: 100%;
-            left: 0;
-        }
-
         .button:hover {
             background-color: #d57eeb;
             transform: translateY(-3px);
         }
-
         .term-project {
             margin-top: 40px;
             padding: 20px;
@@ -161,29 +94,23 @@
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s;
         }
-
         .term-project:hover {
             transform: translateY(-5px);
         }
-
         footer {
             margin-top: 30px;
             font-size: 14px;
             color: #777;
-            text-align: center;
         }
-
         .social-links {
             margin-top: 20px;
         }
-
         .social-links a {
             margin: 0 10px;
             font-size: 24px;
             color: #800080;
             transition: color 0.3s;
         }
-
         .social-links a:hover {
             color: #d57eeb;
         }
@@ -191,10 +118,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="profile-container">
-            <!-- Profile Picture -->
-            <img src="Likitha.png" alt="Profile Picture" class="profile-pic">
-        </div>
+        <!-- Profile Picture -->
+        <img src="Likitha.png" alt="Profile Picture" class="profile-pic">
 
         <!-- Name -->
         <h1>Likitha Magham</h1>
@@ -226,7 +151,6 @@
             <h2>Connect with Me</h2>
             <a href="https://www.linkedin.com/in/your-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.instagram.com/your-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:maghamlikitha@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
         </div>
     </div>
 
