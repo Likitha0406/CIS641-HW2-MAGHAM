@@ -101,6 +101,8 @@
             border: 5px solid #800080;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s;
+            position: relative; /* Needed for proper alignment of the circle */
+            z-index: 1; /* Ensure the image is above the circle */
         }
 
         img.profile-pic:hover {
@@ -111,19 +113,19 @@
         .profile-container::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
+            top: -10px; /* Adjust the top position to align with the profile picture */
+            left: -10px; /* Adjust the left position to align with the profile picture */
             width: 0;
             height: 0;
             border-radius: 50%;
             border: 5px solid #d57eeb; /* Circle color */
             transition: width 0.4s ease, height 0.4s ease;
-            z-index: 1; /* Ensure circle is above profile picture */
+            z-index: 0; /* Ensure the circle is behind the profile picture */
         }
 
         .profile-container:hover::after {
-            width: 180px; /* Circle size */
-            height: 180px; /* Circle size */
+            width: 170px; /* Circle size */
+            height: 170px; /* Circle size */
         }
 
         .button {
@@ -240,7 +242,7 @@
     </div>
 
     <footer>
-        © 2024 Likitha Magham | Designed with Love
+        © 2024 Likitha Magham | Designed with passion.
     </footer>
 </body>
 </html>
