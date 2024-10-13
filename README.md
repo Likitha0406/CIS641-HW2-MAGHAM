@@ -10,5 +10,5 @@
 - Currently pursuing a Master’s in Computer Science, focusing on advanced topics like data structures, machine learning, and system architecture to deepen knowledge and expertise.
 
 ## Favorite Meme
--![Meme](./meme.png)
+![Meme](./meme.png)
 
