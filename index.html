@@ -20,16 +20,17 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            height: 100%; /* Ensure full height */
+        }
+
         body {
             font-family: 'Times New Roman', serif;
             background: linear-gradient(135deg, #800080, #ffffff);
             color: #333;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
             padding: 20px;
             animation: fadeIn 1s;
         }
@@ -44,9 +45,9 @@
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            max-width: 900px;
-            width: 90%;
-            margin-bottom: 40px;
+            max-width: 900px; /* Set max width */
+            width: 90%; /* Responsive width */
+            margin: 0 auto; /* Center horizontally */
             transition: transform 0.5s, box-shadow 0.5s;
             text-align: center; /* Center-align text in the container */
         }
