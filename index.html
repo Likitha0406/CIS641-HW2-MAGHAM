@@ -47,7 +47,6 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
             max-width: 900px; /* Set max width */
             width: 90%; /* Responsive width */
-            margin: 0 auto; /* Center horizontally */
             transition: transform 0.5s, box-shadow 0.5s;
             text-align: center; /* Center-align text in the container */
         }
@@ -61,7 +60,7 @@
             font-size: 48px;
             color: #800080;
             margin-bottom: 10px;
-            animation: slideIn 0.5s;
+            animation: slideIn 0.5s; /* Animation for heading */
         }
 
         @keyframes slideIn {
@@ -92,7 +91,7 @@
             position: relative;
             display: inline-block;
             margin: 20px auto;
-            animation: float 3s ease-in-out infinite;
+            animation: float 3s ease-in-out infinite; /* Floating effect */
         }
 
         @keyframes float {
@@ -100,22 +99,22 @@
                 transform: translateY(0);
             }
             50% {
-                transform: translateY(-10px);
+                transform: translateY(-10px); /* Move up */
             }
         }
 
         img.profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #800080;
+            width: 150px; /* Ensure size is appropriate */
+            height: 150px; /* Ensure size is appropriate */
+            border-radius: 50%; /* Circular profile picture */
+            object-fit: cover; /* Maintain aspect ratio */
+            border: 5px solid #800080; /* Border color */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s;
+            transition: transform 0.3s; /* Smooth scale effect */
         }
 
         img.profile-pic:hover {
-            transform: scale(1.1);
+            transform: scale(1.1); /* Zoom effect on hover */
         }
 
         .button {
@@ -128,8 +127,8 @@
             border-radius: 30px;
             text-decoration: none;
             transition: background-color 0.3s ease, transform 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            position: relative; /* To position pseudo-elements */
+            overflow: hidden; /* To hide overflowing content */
         }
 
         .button:after {
@@ -141,7 +140,7 @@
             height: 100%;
             background: rgba(255, 255, 255, 0.5);
             transition: width 0.5s ease, left 0.5s ease;
-            z-index: 0;
+            z-index: 0; /* Behind text */
         }
 
         .button:hover:after {
