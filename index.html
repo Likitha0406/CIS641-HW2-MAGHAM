@@ -25,13 +25,13 @@
             color: #333;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             min-height: 100vh;
             overflow-x: hidden;
             scroll-behavior: smooth;
             flex-direction: column;
-            padding: 20px;
-            animation: fadeIn 1s;
+            padding: 20px; /* Added padding for aesthetics */
+            animation: fadeIn 1s; /* Fade-in animation */
         }
 
         @keyframes fadeIn {
@@ -47,11 +47,11 @@
             max-width: 900px;
             width: 90%;
             margin-bottom: 40px;
-            transition: transform 0.5s, box-shadow 0.5s;
+            transition: transform 0.5s, box-shadow 0.5s; /* Smooth transition for hover */
         }
 
         .container:hover {
-            transform: translateY(-10px);
+            transform: translateY(-10px); /* Lift effect on hover */
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
         }
 
@@ -60,7 +60,7 @@
             color: #800080;
             margin-bottom: 10px;
             text-align: center; /* Center align heading */
-            animation: slideIn 0.5s;
+            animation: slideIn 0.5s; /* Animation for heading */
         }
 
         @keyframes slideIn {
@@ -73,11 +73,11 @@
             margin-bottom: 15px;
             color: #800080;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-            transition: color 0.3s;
+            transition: color 0.3s; /* Transition for hover effect */
         }
 
         h2:hover {
-            color: #d57eeb;
+            color: #d57eeb; /* Change color on hover */
         }
 
         p {
@@ -155,7 +155,7 @@
             margin-top: 30px;
             font-size: 14px;
             color: #777;
-            text-align: center;
+            text-align: center; /* Center the footer text */
         }
 
         .social-links {
@@ -171,6 +171,13 @@
 
         .social-links a:hover {
             color: #d57eeb;
+        }
+
+        .email {
+            font-size: 18px;
+            color: #800080;
+            margin-top: 20px;
+            text-align: center; /* Center align email */
         }
     </style>
 </head>
@@ -203,6 +210,12 @@
 
         <!-- Personal GitHub Link -->
         <a class="button" href="https://github.com/Likitha0406" target="_blank">Visit My GitHub Profile</a>
+
+        <!-- Email Address -->
+        <div class="email">
+            <h2>Email Me</h2>
+            <p><a href="mailto:maghamlikitha@gmail.com" style="color: #800080; text-decoration: underline;">maghamlikitha@gmail.com</a></p>
+        </div>
 
         <!-- Social Media Links -->
         <div class="social-links">
