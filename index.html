@@ -59,7 +59,7 @@
             font-size: 48px;
             color: #800080;
             margin-bottom: 10px;
-            text-align: center; /* Center align heading */
+            text-align: center;
             animation: slideIn 0.5s;
         }
 
@@ -87,12 +87,17 @@
             margin-bottom: 20px;
         }
 
+        .profile-container {
+            position: relative; /* Needed for the circle positioning */
+            display: inline-block; /* To fit the profile picture */
+            margin: 20px auto;
+        }
+
         img.profile-pic {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 20px auto;
             border: 5px solid #800080;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s;
@@ -100,6 +105,25 @@
 
         img.profile-pic:hover {
             transform: scale(1.1);
+        }
+
+        /* Circle Animation */
+        .profile-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            border: 5px solid #d57eeb; /* Circle color */
+            transition: width 0.4s ease, height 0.4s ease;
+            z-index: 1; /* Ensure circle is above profile picture */
+        }
+
+        .profile-container:hover::after {
+            width: 180px; /* Circle size */
+            height: 180px; /* Circle size */
         }
 
         .button {
@@ -172,24 +196,14 @@
         .social-links a:hover {
             color: #d57eeb;
         }
-
-        .email-link {
-            margin: 0 10px;
-            font-size: 24px;
-            color: #800080;
-            transition: color 0.3s;
-            text-decoration: none;
-        }
-
-        .email-link:hover {
-            color: #d57eeb;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Profile Picture -->
-        <img src="Likitha.png" alt="Profile Picture" class="profile-pic">
+        <div class="profile-container">
+            <!-- Profile Picture -->
+            <img src="Likitha.png" alt="Profile Picture" class="profile-pic">
+        </div>
 
         <!-- Name -->
         <h1>Likitha Magham</h1>
@@ -221,12 +235,12 @@
             <h2>Connect with Me</h2>
             <a href="https://www.linkedin.com/in/your-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.instagram.com/your-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a class="email-link" href="mailto:maghamlikitha@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="mailto:maghamlikitha@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
         </div>
     </div>
 
     <footer>
-        © 2024 Likitha Magham | Designed with passion.
+        © 2024 Likitha Magham | Designed with Love
     </footer>
 </body>
 </html>
