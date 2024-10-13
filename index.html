@@ -25,7 +25,7 @@
             color: #333;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             min-height: 100vh;
             overflow-x: hidden;
             scroll-behavior: smooth;
@@ -34,13 +34,14 @@
         .profile-section {
             position: relative;
             width: 100%;
-            height: 250px; /* Adjust the height as needed */
+            height: 300px; /* Height for the background image */
             background-image: url('Landscape.jpg'); /* Your background image */
             background-size: cover;
             background-position: center;
             border-radius: 20px 20px 0 0;
             overflow: hidden;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            margin-bottom: -75px; /* Adjusts space below the background image */
         }
         img.profile-pic {
             width: 150px;
@@ -48,9 +49,9 @@
             border-radius: 50%;
             object-fit: cover;
             position: absolute;
-            bottom: -75px; /* Move the profile picture below the background */
-            left: 20px; /* Adjust the position as needed */
-            border: 5px solid #800080;
+            bottom: -75px; /* Position the profile picture slightly lower */
+            left: 20px; /* Adjust the position */
+            border: 5px solid #ffffff; /* White border for contrast */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s;
         }
@@ -64,7 +65,8 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
             max-width: 900px;
             width: 90%;
-            margin-top: 60px; /* Space for the profile picture */
+            margin-top: -50px; /* Adjust space for overlap */
+            z-index: 1; /* Ensure content appears above background */
             transition: transform 0.5s;
         }
         h1 {
