@@ -25,38 +25,11 @@
             color: #333;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             min-height: 100vh;
             overflow-x: hidden;
             scroll-behavior: smooth;
             flex-direction: column;
-        }
-        .profile-section {
-            position: relative;
-            width: 100%;
-            height: 300px; /* Height for the background image */
-            background-image: url('Landscape.jpg'); /* Your background image */
-            background-size: cover;
-            background-position: center;
-            border-radius: 20px 20px 0 0;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-            margin-bottom: -75px; /* Adjusts space below the background image */
-        }
-        img.profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            position: absolute;
-            bottom: -75px; /* Position the profile picture slightly lower */
-            left: 20px; /* Adjust the position */
-            border: 5px solid #ffffff; /* White border for contrast */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s;
-        }
-        img.profile-pic:hover {
-            transform: scale(1.1);
         }
         .container {
             background-color: rgba(255, 255, 255, 0.9);
@@ -65,8 +38,7 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
             max-width: 900px;
             width: 90%;
-            margin-top: -50px; /* Adjust space for overlap */
-            z-index: 1; /* Ensure content appears above background */
+            margin-bottom: 40px;
             transition: transform 0.5s;
         }
         h1 {
@@ -85,6 +57,19 @@
             line-height: 1.7;
             color: #555;
             margin-bottom: 20px;
+        }
+        img.profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto;
+            border: 5px solid #800080;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+        img.profile-pic:hover {
+            transform: scale(1.1);
         }
         .button {
             display: inline-block;
@@ -132,11 +117,10 @@
     </style>
 </head>
 <body>
-    <div class="profile-section">
+    <div class="container">
         <!-- Profile Picture -->
         <img src="Likitha.png" alt="Profile Picture" class="profile-pic">
-    </div>
-    <div class="container">
+
         <!-- Name -->
         <h1>Likitha Magham</h1>
 
