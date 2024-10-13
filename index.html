@@ -7,9 +7,9 @@
     <title>Likitha Magham's Portfolio</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <!-- Internal CSS for styling -->
+    <!-- External CSS for styling -->
     <style>
         * {
             margin: 0;
@@ -17,119 +17,122 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Nunito', sans-serif;
-            background: linear-gradient(160deg, #e0c3fc, #8ec5fc);
-            color: #333;
-            padding: 20px;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f1c40f, #e67e22);
+            color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            flex-direction: column;
-        }
-        .container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            max-width: 1200px;
-            width: 100%;
             text-align: center;
+            overflow: hidden;
             position: relative;
         }
+        .container {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            max-width: 900px;
+            width: 90%;
+            transition: transform 0.5s, box-shadow 0.5s;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
         h1 {
-            font-family: 'Poppins', sans-serif;
             font-weight: 700;
-            color: #6a11cb;
-            font-size: 42px;
+            color: #f1c40f;
+            font-size: 40px;
             margin-bottom: 10px;
+            letter-spacing: 1.5px;
         }
         h2 {
-            font-family: 'Poppins', sans-serif;
             font-size: 28px;
-            color: #333;
-            margin-bottom: 20px;
-            font-weight: 600;
+            margin-bottom: 15px;
+            color: #e67e22;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
         }
         p {
             font-size: 18px;
             line-height: 1.7;
-            color: #555;
+            color: #f0f0f0;
+            margin-bottom: 20px;
         }
         img.profile-pic {
-            width: 180px;
-            height: 180px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 20px;
-            border: 5px solid #6a11cb;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            border: 5px solid #f1c40f;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+        img.profile-pic:hover {
+            transform: scale(1.1);
         }
         .button {
             display: inline-block;
-            margin-top: 30px;
-            padding: 15px 30px;
+            margin-top: 20px;
+            padding: 12px 25px;
             font-size: 18px;
-            background-color: #6a11cb;
+            background-color: #e67e22;
             color: white;
             border-radius: 30px;
             text-decoration: none;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
         .button:hover {
-            background-color: #b721ff;
+            background-color: #f1c40f;
             transform: translateY(-3px);
-        }
-        .section {
-            margin: 30px 0;
-        }
-        .skills-list, .projects-list {
-            margin: 20px 0;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        .skills-list li, .projects-list li {
-            margin-bottom: 10px;
-            font-size: 18px;
-            width: 45%;
         }
         .term-project {
             margin-top: 40px;
-        }
-        .project-description {
-            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-            transition: transform 0.4s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
         }
-        .project-description:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        .term-project:hover {
+            transform: translateY(-5px);
         }
         footer {
-            margin-top: 40px;
+            margin-top: 30px;
             font-size: 14px;
-            color: #777;
+            color: #ccc;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
         }
         @media (max-width: 768px) {
             h1 {
-                font-size: 36px;
+                font-size: 30px;
             }
             h2 {
                 font-size: 24px;
             }
             img.profile-pic {
-                width: 140px;
-                height: 140px;
+                width: 120px;
+                height: 120px;
             }
-            .skills-list li, .projects-list li {
-                width: 100%;
-            }
-            .container {
-                padding: 20px;
+            .button {
+                padding: 10px 20px;
+                font-size: 16px;
             }
         }
     </style>
@@ -143,40 +146,30 @@
         <h1>Likitha Magham</h1>
 
         <!-- Interests Section -->
-        <div class="section">
-            <h2>Interests</h2>
-            <p>I am passionate about traveling, singing, and cooking. I enjoy exploring new cultures, expressing creativity through music, and experimenting with different cuisines.</p>
-        </div>
+        <h2>Interests</h2>
+        <p>I am passionate about traveling, singing, and cooking. I enjoy exploring new cultures and places, and expressing my creativity through music and culinary experiments.</p>
 
         <!-- Technical Background Section -->
-        <div class="section">
-            <h2>Technical Background</h2>
-            <p>I hold a Bachelor's degree in Computer Science and Engineering, and I am currently pursuing my Master's in Computer Science. My focus is on data structures, machine learning, and system architecture.</p>
-        </div>
+        <h2>Technical Background</h2>
+        <p>I hold a Bachelor's degree in Computer Science and Engineering, and I am currently pursuing my Master's in Computer Science, focusing on data structures, machine learning, and system architecture.</p>
 
-        <!-- GitHub Link -->
-        <div class="section">
-            <h2>Team GitHub Page</h2>
-            <a class="button" href="https://github.com/yourteam/your-repository" target="_blank">Visit My Team's GitHub Page</a>
-        </div>
+        <!-- Team GitHub Link -->
+        <h2>Team GitHub Page</h2>
+        <a class="button" href="https://github.com/yourteam/your-repository" target="_blank">Visit My Team's GitHub Page</a>
 
         <!-- Term Project Section -->
         <div class="term-project">
             <h2>My Term Project</h2>
-            <div class="project-description">
-                <p>For my term project, I am developing a web-based system that leverages cloud infrastructure and data processing technologies to build a scalable solution for real-time data analysis. This project involves the integration of front-end technologies with back-end cloud services, aiming to optimize user experience while maintaining system efficiency.</p>
-                <p>My role includes designing the system architecture, implementing data pipelines, and ensuring smooth communication between different system components. This project showcases my ability to apply both front-end and back-end skills, including Java, Spring Boot, and AWS, in a practical setting.</p>
-            </div>
+            <p>For my term project, I am developing a web-based system that leverages cloud infrastructure and data processing technologies to build a scalable solution for real-time data analysis. This project involves the integration of front-end technologies with back-end cloud services, aiming to optimize the user experience while maintaining system efficiency.</p>
+            <p>My role in this project includes designing the system architecture, implementing data pipelines, and ensuring smooth communication between different system components. This project demonstrates my ability to apply both front-end and back-end skills, including Java, Spring Boot, and AWS, in a practical setting.</p>
         </div>
 
         <!-- Personal GitHub Link -->
-        <div class="section">
-            <a class="button" href="https://github.com/Likitha0406/GVSU-CIS641-The-PowerPuffGirls">Visit My GitHub Profile</a>
-        </div>
-
-        <footer>
-            © 2024 Likitha Magham | Designed with passion.
-        </footer>
+        <a class="button" href="https://github.com/Likitha0406" target="_blank">Visit My GitHub Profile</a>
     </div>
+
+    <footer>
+        © 2024 Likitha Magham | Designed with passion.
+    </footer>
 </body>
 </html>
