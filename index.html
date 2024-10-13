@@ -31,6 +31,32 @@
             scroll-behavior: smooth;
             flex-direction: column;
         }
+        .profile-section {
+            position: relative;
+            width: 100%;
+            height: 250px; /* Adjust the height as needed */
+            background-image: url('Landscape.jpg'); /* Your background image */
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        img.profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            bottom: -75px; /* Move the profile picture below the background */
+            left: 20px; /* Adjust the position as needed */
+            border: 5px solid #800080;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+        img.profile-pic:hover {
+            transform: scale(1.1);
+        }
         .container {
             background-color: rgba(255, 255, 255, 0.9);
             padding: 40px;
@@ -38,7 +64,7 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
             max-width: 900px;
             width: 90%;
-            margin-bottom: 40px;
+            margin-top: 60px; /* Space for the profile picture */
             transition: transform 0.5s;
         }
         h1 {
@@ -57,19 +83,6 @@
             line-height: 1.7;
             color: #555;
             margin-bottom: 20px;
-        }
-        img.profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 20px auto;
-            border: 5px solid #800080;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s;
-        }
-        img.profile-pic:hover {
-            transform: scale(1.1);
         }
         .button {
             display: inline-block;
@@ -117,10 +130,11 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="profile-section">
         <!-- Profile Picture -->
         <img src="Likitha.png" alt="Profile Picture" class="profile-pic">
-
+    </div>
+    <div class="container">
         <!-- Name -->
         <h1>Likitha Magham</h1>
 
