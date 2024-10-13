@@ -29,38 +29,17 @@
             min-height: 100vh;
             overflow-x: hidden;
             scroll-behavior: smooth;
-            padding: 20px;
+            flex-direction: column;
         }
         .container {
-            display: flex; /* Use flexbox for two columns */
             background-color: rgba(255, 255, 255, 0.9);
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
             max-width: 900px;
             width: 90%;
+            margin-bottom: 40px;
             transition: transform 0.5s;
-        }
-        .profile {
-            flex: 1; /* Take equal space for profile */
-            text-align: center; /* Center align text in profile */
-        }
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #800080;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s;
-            margin-bottom: 20px;
-        }
-        .profile-pic:hover {
-            transform: scale(1.1);
-        }
-        .info {
-            flex: 1.5; /* Right side panel */
-            padding-left: 20px; /* Spacing from profile */
         }
         h1 {
             font-size: 48px;
@@ -78,6 +57,19 @@
             line-height: 1.7;
             color: #555;
             margin-bottom: 20px;
+        }
+        img.profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto;
+            border: 5px solid #800080;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+        img.profile-pic:hover {
+            transform: scale(1.1);
         }
         .button {
             display: inline-block;
@@ -126,42 +118,39 @@
 </head>
 <body>
     <div class="container">
-        <div class="profile">
-            <!-- Profile Picture -->
-            <img src="Likitha.png" alt="Profile Picture" class="profile-pic">
-            <!-- Name -->
-            <h1>Likitha Magham</h1>
+        <!-- Profile Picture -->
+        <img src="Likitha.png" alt="Profile Picture" class="profile-pic">
+
+        <!-- Name -->
+        <h1>Likitha Magham</h1>
+
+        <!-- Interests Section -->
+        <h2>Interests</h2>
+        <p>I am passionate about traveling, singing, and cooking. I enjoy exploring new cultures and places, and expressing my creativity through music and culinary experiments.</p>
+
+        <!-- Technical Background Section -->
+        <h2>Technical Background</h2>
+        <p>I hold a Bachelor's degree in Computer Science and Engineering, and I am currently pursuing my Master's in Computer Science, focusing on data structures, machine learning, and system architecture.</p>
+
+        <!-- Team GitHub Link -->
+        <h2>Team GitHub Page</h2>
+        <a class="button" href="https://github.com/yourteam/your-repository" target="_blank">Visit My Team's GitHub Page</a>
+
+        <!-- Term Project Section -->
+        <div class="term-project">
+            <h2>My Term Project</h2>
+            <p>For my term project, I am developing a web-based system that leverages cloud infrastructure and data processing technologies to build a scalable solution for real-time data analysis. This project involves the integration of front-end technologies with back-end cloud services, aiming to optimize the user experience while maintaining system efficiency.</p>
+            <p>My role in this project includes designing the system architecture, implementing data pipelines, and ensuring smooth communication between different system components. This project demonstrates my ability to apply both front-end and back-end skills, including Java, Spring Boot, and AWS, in a practical setting.</p>
         </div>
 
-        <div class="info">
-            <!-- Interests Section -->
-            <h2>Interests</h2>
-            <p>I am passionate about traveling, singing, and cooking. I enjoy exploring new cultures and places, and expressing my creativity through music and culinary experiments.</p>
+        <!-- Personal GitHub Link -->
+        <a class="button" href="https://github.com/Likitha0406" target="_blank">Visit My GitHub Profile</a>
 
-            <!-- Technical Background Section -->
-            <h2>Technical Background</h2>
-            <p>I hold a Bachelor's degree in Computer Science and Engineering, and I am currently pursuing my Master's in Computer Science, focusing on data structures, machine learning, and system architecture.</p>
-
-            <!-- Team GitHub Link -->
-            <h2>Team GitHub Page</h2>
-            <a class="button" href="https://github.com/yourteam/your-repository" target="_blank">Visit My Team's GitHub Page</a>
-
-            <!-- Term Project Section -->
-            <div class="term-project">
-                <h2>My Term Project</h2>
-                <p>For my term project, I am developing a web-based system that leverages cloud infrastructure and data processing technologies to build a scalable solution for real-time data analysis. This project involves the integration of front-end technologies with back-end cloud services, aiming to optimize the user experience while maintaining system efficiency.</p>
-                <p>My role in this project includes designing the system architecture, implementing data pipelines, and ensuring smooth communication between different system components. This project demonstrates my ability to apply both front-end and back-end skills, including Java, Spring Boot, and AWS, in a practical setting.</p>
-            </div>
-
-            <!-- Personal GitHub Link -->
-            <a class="button" href="https://github.com/Likitha0406" target="_blank">Visit My GitHub Profile</a>
-
-            <!-- Social Media Links -->
-            <div class="social-links">
-                <h2>Connect with Me</h2>
-                <a href="https://www.linkedin.com/in/your-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/your-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <h2>Connect with Me</h2>
+            <a href="https://www.linkedin.com/in/your-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/your-instagram" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
     </div>
 
